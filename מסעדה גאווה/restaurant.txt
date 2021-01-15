@@ -1,0 +1,28 @@
+package com.company;
+
+import java.util.HashMap;
+
+
+
+    public class Restaurant {
+    String resName;
+    HashMap<Ingredient,Double> ingreidients;
+
+    public Restaurant(String resName){
+        this.resName = resName;
+        ingreidients = new HashMap<Ingredient,Double>();
+    }
+
+   public void addingredient(Ingredient i, Double amount){
+        ingreidients.put(i,amount);
+
+    }
+
+   public  Double totalCost(){
+       ingreidients.forEach((Ingredient i,Double amount)->{
+           i.getIngPrice() * amount
+       }
+    }
+
+
+}
